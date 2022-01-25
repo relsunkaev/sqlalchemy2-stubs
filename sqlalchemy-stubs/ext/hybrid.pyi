@@ -54,7 +54,7 @@ class hybrid_property(Generic[_T, _V], interfaces.InspectionAttrInfo):
     update_expr: Optional[
         Callable[
             [Type[_T], _V],
-            Sequence[Tuple[attributes.InstrumentedAttribute[Any], Any]],
+            Sequence[Tuple[attributes.InstrumentedAttribute, Any]],
         ]
     ] = ...
     def __init__(
@@ -87,7 +87,7 @@ class hybrid_property(Generic[_T, _V], interfaces.InspectionAttrInfo):
         self,
         meth: Callable[
             [Type[_T], _V],
-            Sequence[Tuple[attributes.InstrumentedAttribute[Any], Any]],
+            Sequence[Tuple[attributes.InstrumentedAttribute, Any]],
         ],
     ) -> Self: ...
 
